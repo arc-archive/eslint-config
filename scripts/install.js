@@ -5,9 +5,18 @@ const fs = require('fs');
  * if such files aren't installed already.
  */
 
+const parts = process.cwd().split(path.sep);
+const index = parts.findIndex((i) => i === 'node_modules');
+let base;
+if (index === -1) {
+  base = process.cwd();
+} else {
+  base = parts.slice(0, index).join(path.sep);
+}
+
 function copyTemplate(file) {
   const loc = path.join(__dirname, '..', 'templates', file);
-  const dest = path.join(process.cwd(), file);
+  const dest = path.join(base, file);
   let exists = false;
   try {
     if (fs.existsSync(dest)) {
@@ -31,4 +40,7 @@ function copyTemplate(file) {
   });
 }
 
-copyTemplate('.eslintignore').then(() => copyTemplate('.eslintrc.js'));
+// Skip execution when installing in the actuall package directory.
+if (path.join(__dirname, '..') !== process.cwd()) {
+  copyTemplate('.eslintignore').then(() => copyTemplate('.eslintrc.js'));
+}
