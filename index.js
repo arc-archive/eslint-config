@@ -1,6 +1,5 @@
 module.exports = {
   extends: ['plugin:wc/best-practice', 'eslint:recommended', 'google'],
-  parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 8
