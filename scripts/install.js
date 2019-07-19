@@ -40,7 +40,4 @@ function copyTemplate(file) {
   });
 }
 
-// Skip execution when installing in the actuall package directory.
-if (path.join(__dirname, '..') !== process.cwd()) {
-  copyTemplate('.eslintignore').then(() => copyTemplate('.eslintrc.js'));
-}
+copyTemplate('.eslintignore').then(() => copyTemplate('.eslintrc.js'));
