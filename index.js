@@ -19,7 +19,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/test/**/*.js', '**/demo/**/*.js', '**/stories/**/*.js'],
+      files: ['**/test/**/*.js', '**/demo/**/*.js', '**/test/**/*.html', '**/demo/**/*.html', '**/stories/**/*.js'],
       rules: {
         'no-console': 'off',
         'no-unused-expressions': 'off',
