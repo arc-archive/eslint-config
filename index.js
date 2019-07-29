@@ -7,7 +7,8 @@ module.exports = {
   env: {
     browser: true,
     mocha: true,
-    node: true
+    node: true,
+    es6: true
   },
   plugins: ['html'],
   rules: {
