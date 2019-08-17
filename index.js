@@ -1,5 +1,10 @@
 module.exports = {
-  extends: ['plugin:wc/best-practice', 'eslint:recommended', 'google'],
+  extends: [
+    'plugin:wc/best-practice',
+    'eslint:recommended',
+    'google',
+    require.resolve('./src/eslint-plugin-wc-export')
+  ],
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 8
