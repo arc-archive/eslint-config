@@ -28,10 +28,10 @@
     "access": "public"
   },
   "dependencies": {
-    "eslint": "^5.13.0",
+    "eslint": "^6.2.1",
     "eslint-config-google": "^0.13.0",
-    "eslint-plugin-html": "^4.0.0",
-    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-wc": "^1.2.0"
   },
   "scripts": {
