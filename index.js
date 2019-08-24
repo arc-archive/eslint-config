@@ -41,7 +41,8 @@ module.exports = {
       rules: {
         'no-console': 'off',
         'no-unused-expressions': 'off',
-        'class-methods-use-this': 'off'
+        'class-methods-use-this': 'off',
+        'import/no-extraneous-dependencies': 'off'
       }
     }
   ]
