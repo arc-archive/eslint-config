@@ -3,6 +3,9 @@ module.exports = {
     'plugin:wc/best-practice',
     'eslint:recommended',
     'google',
+    'eslint-config-prettier',
+    'plugin:import/errors',
+    'plugin:import/warnings',
     require.resolve('./src/eslint-plugin-wc-export')
   ],
   parserOptions: {
@@ -21,7 +24,16 @@ module.exports = {
     'comma-dangle': 0,
     'new-cap': ['error', { properties: false, capIsNew: false }],
     'max-len': ['error', { code: 120 }],
-    'object-curly-spacing': ['error', 'always']
+    'object-curly-spacing': ['error', 'always'],
+    'no-console': ['error'],
+    'import/extensions': ['error', 'always', { ignorePackages: true }],
+    'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['**/test/**/*.js', '**/stories/**/*.js', '**/*.config.js'],
+      },
+    ],
   },
   overrides: [
     {
