@@ -28,9 +28,10 @@
     "access": "public"
   },
   "dependencies": {
-    "eslint": "^6.2.1",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-wc": "^1.2.0"

@@ -8,6 +8,7 @@ module.exports = {
     'plugin:import/warnings',
     require.resolve('./src/eslint-plugin-wc-export')
   ],
+  parser: "babel-eslint",
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 8
